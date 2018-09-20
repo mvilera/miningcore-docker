@@ -5,7 +5,7 @@ MAINTAINER oliver@weichhold.com
 RUN apt-get update -y && apt-get -y install git cmake build-essential libssl-dev pkg-config libboost-all-dev libsodium-dev
 
 # build
-RUN cd /tmp && git clone https://github.com/coinfoundry/miningcore && cd miningcore && git checkout tags/v26 && cd src/MiningCore && \
+RUN cd /tmp && git clone https://github.com/coinfoundry/miningcore && cd miningcore && git checkout tags/v28 && cd src/MiningCore && \
     chmod +x ./linux-build.sh && ./linux-build.sh && mkdir /dotnetapp && cp -r ../../build/* /dotnetapp
 
 WORKDIR /dotnetapp
